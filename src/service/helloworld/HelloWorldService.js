@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const USER = 'user'
-const PASSWORD = 'password'
+const PASSWORD = 'dummy'
 const API_URL = 'http://localhost:8080'
 const HELLO_API_URL = `${API_URL}/hello-world`
 
