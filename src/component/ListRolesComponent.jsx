@@ -25,7 +25,11 @@ class ListRolesComponent extends Component {
         RolesDataService.retrieveAllRoles()
             .then(
                 response => {
-                    this.setState({ roles: response.data })
+                        this.setState({ roles: response.data})
+                }
+            ).catch(
+                () => {
+                    this.props.history.push(`/login`)
                 }
             )
     }
@@ -73,7 +77,7 @@ class ListRolesComponent extends Component {
                                     rol =>
                                         <tr key={rol.id}>
                                             <td>{rol.id}</td>
-                                            <td>{rol.description}</td>
+                                            <td>{rol.authority}</td>
                                             <td><button className="btn btn-success" onClick={() => this.updateRolClicked(rol.id)}>Update</button></td>
                                             <td><button className="btn btn-warning" onClick={() => this.deleteRolClicked(rol.id)}>Delete</button></td>
                                         </tr>

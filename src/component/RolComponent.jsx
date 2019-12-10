@@ -37,9 +37,9 @@ class RolComponent extends Component {
 
     validate(values) {
         let errors = {}
-        if (!values.description) {
+        if (!values.authority) {
             errors.description = 'Enter a Description'
-        } else if (values.description.length < 5) {
+        } else if (values.authority.length < 5) {
             errors.description = 'Enter atleast 5 Characters in Description'
         }
 
@@ -52,7 +52,7 @@ class RolComponent extends Component {
 
         let rol = {
             id: this.state.id,
-            description: values.description,
+            authority: values.authority,
             targetDate: values.targetDate
         }
 
@@ -98,7 +98,7 @@ class RolComponent extends Component {
                                     </fieldset>
                                     <fieldset className="form-group">
                                         <label>Description</label>
-                                        <Field className="form-control" type="text" name="description" />
+                                        <Field className="form-control" type="text" name="authority" />
                                     </fieldset>
                                     <button className="btn btn-success" type="submit">Save</button>
                                     <button className="btn btn-success" onClick={this.goToListRolesComponent}>Go back</button>

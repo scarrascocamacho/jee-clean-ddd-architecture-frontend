@@ -16,22 +16,22 @@ class RolesDataService {
 
     retrieveRol(username, id) {
         //console.log('executed service')
-        return axios.get(`${ROL_API_URL}/${username}/roles/${id}`);
+        return axios.get(`${ROL_API_URL}/roles/${id}`);
     }
 
     deleteRol(username, id) {
         //console.log('executed service')
-        return axios.delete(`${ROL_API_URL}/${username}/roles/${id}`);
+        return axios.delete(`${ROL_API_URL}/roles/${id}`);
     }
 
     updateRol(username, id, rol) {
         //console.log('executed service')
-        return axios.put(`${ROL_API_URL}/${username}/roles/${id}`, rol);
+        return axios.put(`${ROL_API_URL}/roles/${id}`, rol);
     }
 
     createRol(username, rol) {
         //console.log('executed service')
-        return axios.post(`${ROL_API_URL}/${username}/roles`, rol);
+        return axios.post(`${ROL_API_URL}/roles`, rol);
     }
 
 }

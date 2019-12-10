@@ -7,8 +7,8 @@ class LoginComponent extends Component {
         super(props)
 
         this.state = {
-            username: 'user',
-            password: 'dummy',
+            username: '',
+            password: '',
             hasLoginFailed: false,
             showSuccessMessage: false
         }
